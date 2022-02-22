@@ -1,0 +1,5 @@
+@mixin wrapper($pad: 3rem) {
+    margin: 0 auto;
+    padding: $pad;
+    max-width: $max-width;
+}
