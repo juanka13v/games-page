@@ -1,4 +1,6 @@
 import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
+import Home from "./pages/Home";
 import "./sass/main.scss";
 import {
   BrowserRouter as Router, 
@@ -9,9 +11,11 @@ import {
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Navbar/>}/>
+        <Route path='/' element={<Home/>}/>
       </Routes>
+      <Footer />
     </Router>
   );
 }

@@ -1,81 +1,84 @@
 .container_navbar {
-    max-width: $max-width;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     background-color: $bg-color-2;
-    align-items: center;
-    padding: 1rem;
-    @media screen and (max-width: $md) {
-        flex-direction: column;
-    }
-
-    .navbar_logo {
+    
+    .navbar_wrapper {
+        max-width: $max-width;
+        margin: 0 auto;
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        @media screen and (max-width: $md) {
-            width: 100%;
-        }
-
-        i {
-            font-size: 3rem;
-            color: $bg-color-3;            
-        }
-        
-
-        .navbar_menu {
-            display: none;
-            @media screen and (max-width: $md) {
-                display: block;
-
-            }
-            i {
-                cursor: pointer;
-                font-size: 2rem;
-                float: right;
-                color: $bg-color-3;
-            }
-        }
-    }
-
-    .navbar_items {
-        list-style: none;
-        display: flex;
-        color: $text-color-3;
-        font-family: $font-family-1;
+        align-items: center;
+        padding: 1rem;
         @media screen and (max-width: $md) {
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            transition: all .3s ease-in-out;
-            height: 0;
         }
-
-        li {
-            font-size: 1.2rem;
-            margin: 0 .7rem;
-            font-weight: 500;
-            text-align: center;
+    
+        .navbar_logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             @media screen and (max-width: $md) {
-                margin: 1rem 0;
+                width: 100%;
             }
-
-            a {
-                text-decoration: none;
-                color: inherit;
-
-                &:hover {
+    
+            i {
+                font-size: 3rem;
+                color: $bg-color-3;            
+            }
+            
+    
+            .navbar_menu {
+                display: none;
+                @media screen and (max-width: $md) {
+                    display: block;
+    
+                }
+                i {
+                    cursor: pointer;
+                    font-size: 2rem;
+                    float: right;
                     color: $bg-color-3;
                 }
             }
         }
-    }
-
-    .navbar_active {
-       @media screen and (max-width: $md) {
-            height: 300px;
-       }
+    
+        .navbar_items {
+            list-style: none;
+            display: flex;
+            color: $text-color-3;
+            font-family: $font-family-1;
+            @media screen and (max-width: $md) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                transition: all .3s ease-in-out;
+                height: 0;
+            }
+    
+            li {
+                font-size: 1.2rem;
+                margin: 0 .7rem;
+                font-weight: 500;
+                text-align: center;
+                @media screen and (max-width: $md) {
+                    margin: 1rem 0;
+                }
+    
+                a {
+                    text-decoration: none;
+                    color: inherit;
+    
+                    &:hover {
+                        color: $bg-color-3;
+                    }
+                }
+            }
+        }
+    
+        .navbar_active {
+           @media screen and (max-width: $md) {
+                height: 300px;
+           }
+        }
     }
 }

@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <div className='container_footer'>
         <div className="footer_redes">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-solid fa-envelope"></i>
+          <i className="fa-brands fa-facebook-f"></i>
+          <i className="fa-brands fa-twitter"></i>
+          <i className="fa-brands fa-instagram"></i>
+          <i className="fa-brands fa-github"></i>
+          <i className="fa-solid fa-envelope"></i>
         </div>
         <ul className="footer_links">
           <li>© All rights reserved.</li>
