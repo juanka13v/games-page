@@ -1,3 +1,22 @@
 .cards {
- 
+  width: 100%;
+  background-color: $bg-color-2;
+  color: $bg-color-3;
+  display: flex;
+  flex-direction: column;
+
+  .cards_title {
+    //  display: flex;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .cards_content {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 0 0 2rem 0;
+  }
 }

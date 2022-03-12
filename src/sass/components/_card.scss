@@ -1,14 +1,15 @@
 .card {
-  margin: 0 auto;
   position: relative;
-  width: 320px;
-  height: 270px;
-  border: 1px solid black;
+  min-width: 280px;
+  min-height: 250px;
+  max-width: 350px;
+  max-height: 320px;
   background-color: $bg-color-2;
   color: $text-color-3;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
+  border: 1px solid $text-color-3;
 
   .card_img {
     max-width: 100%;
@@ -40,11 +41,11 @@
   .card_tag {
     color: $text-color-1;
     background-color: $bg-color-3;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     position: absolute;
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 1rem;
     top: .5rem;
     right: .5rem;
