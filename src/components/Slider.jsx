@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Slider = ({ imgs }) => {
-  const [slideIndex, setSlideIndex] = useState(2);
+  const [slideIndex, setSlideIndex] = useState(0);
 
   const nextSlide = () => {
     if (slideIndex === 2) {
