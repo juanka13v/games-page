@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import Filter from "../components/Filter";
 import SingleGame from "../components/SingleGame";
 
 // Hacer en la api una reconmendacion aleatoria
@@ -35,7 +36,7 @@ const Home = () => {
     <div className="container_home">
       <div className="home_wrapper">
         <h1>Home</h1>
-        <Cards
+        {/* <Cards
           games={data}
           titleCard="All Games Collection"
           loading={loading}
@@ -43,7 +44,8 @@ const Home = () => {
           page={page}
           totalGames={totalGames}
           limit={limit}
-        />
+        /> */}
+        <Filter />
       </div>
     </div>
   );

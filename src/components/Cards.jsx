@@ -23,13 +23,16 @@ function Cards({
           return <Card {...game} key={game._id} />;
         })}
       </div>
-      <Pagination
-        setPage={setPage}
-        page={page}
-        games={games}
-        totalGames={totalGames}
-        limit={limit}
-      />
+
+      {totalGames > limit && (
+        <Pagination
+          setPage={setPage}
+          page={page}
+          games={games}
+          totalGames={totalGames}
+          limit={limit}
+        />
+      )}
     </div>
   );
 }

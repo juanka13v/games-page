@@ -1,0 +1,40 @@
+.filter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-color-2;
+  color: $bg-color-7;
+
+  .filter_title {
+    display: flex;
+    letter-spacing: 2px;
+    justify-content: flex-start;
+    margin: 1.3rem;
+  }
+
+  .filter_items {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 1.3rem;
+    margin-left: 1.3rem;
+    .item {
+        margin: 0 1rem;
+      select {
+        color: $text-color-3;
+        background-color: $bg-color-4;
+        width: 120px;
+        height: 30px;
+        outline: none;
+      }
+    }
+
+    .btn-filter {
+      border: none;
+      border-radius: 10px;
+      padding: 4px 15px;
+      cursor: pointer;
+      text-transform: uppercase;
+      background-color: $bg-color-7;
+    }
+  }
+}
