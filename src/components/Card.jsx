@@ -8,7 +8,7 @@ const Card = ({title, thumbnail, short_description,genre}) => {
         <img src={thumbnail} alt={title} />
       </div>
       <div className="card-body">
-        <span class="tag">{genre}</span>
+        <span className="tag">{genre}</span>
         <h4>{title}</h4>
         <p>{short_description}</p>
       </div>
