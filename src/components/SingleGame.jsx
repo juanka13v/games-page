@@ -5,44 +5,57 @@ function SingleGame({
   title,
   description,
   genre,
-  platforms,
+  platform,
   developer,
   publisher,
   release_date,
   franchise,
   thumbnail,
-  screenshots
+  screenshots,
 }) {
-  if(title) {
+  if (title) {
     return (
-
-      <div>
-        <h1>Single Game</h1>
-        <Slider imgs={screenshots} />
+      <div className="single-game">
+        <div className="header">
+          <h2>{title}</h2>
+          <div className="img">
+            <img src={thumbnail} alt={title} />
+          </div>
+        </div>
+        <div className="body">
+          <div className="slider">
+            <Slider imgs={screenshots} />
+          </div>
+          <div className="content">
+            <p>
+              <span>Description:</span> {description}
+            </p>
+            <p>
+              <span>genre:</span> {genre}
+            </p>
+            <p>
+              <span>Realese Date:</span> {release_date.slice(0, 10)}
+            </p>
+            <p>
+              <span>developer:</span> {developer}
+            </p>
+            <p>
+              <span>publisher:</span> {publisher}
+            </p>
+            {franchise && (
+              <p>
+                <span>Franchise:</span> {franchise}
+              </p>
+            )}
+                <p>
+                  <span>Platforms:</span> {platform.join(",  ")}
+                </p>
+          </div>
+        </div>
       </div>
-        // <div className="single-game">
-        //   <div className="content">
-        //     <h2>{title}</h2>
-        //     <img src={thumbnail} alt={title} />
-        //     {screenshots.map((item, index) => {
-        //         console.log(item)
-        //        return <img src={item} key={index} />
-        //     })}
-        //   </div>
-        //   <div className="details">
-        //     <p>Description: {description}</p>
-        //     <p>genre: {genre}</p>
-        //     <p>Realese Date : {release_date.slice(0, 10)}</p>
-        //     <p>developer: {developer}</p>
-        //     <p>publisher: {publisher}</p>
-        //     {franchise && <p>Franchise: {franchise}</p>}
-        //   </div>
-        // </div>
-      );
+    );
   } else {
-      return (
-          <h2>Oh something wrong</h2>
-      )
+    return <h2>Oh something wrong</h2>;
   }
 }
 

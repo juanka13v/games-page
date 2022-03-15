@@ -34,10 +34,10 @@ const Slider = ({ imgs }) => {
         );
       })}
       <button className="btn-slide next" onClick={nextSlide}>
-        &#8594;
+       <i className="fa-solid fa-arrow-right"></i>
       </button>
       <button className="btn-slide prev" onClick={prevSlide}>
-        &#8592;
+        <i className="fa-solid fa-arrow-left"></i>
       </button>
     </div>
   );

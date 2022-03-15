@@ -7,6 +7,7 @@ import {
   Routes, 
   Route
 } from 'react-router-dom';
+import SingleGame from "./components/SingleGame";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path="/single-game" element={<SingleGame />} />
       </Routes>
       <Footer />
     </Router>

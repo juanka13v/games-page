@@ -1,8 +1,8 @@
 .container_home {
     width: 100%;
+    background-color: $bg-color-8;
 
     .home_wrapper {
-        border: 1px solid green;
         max-width: $max-width;
         margin: 0 auto;
     }
