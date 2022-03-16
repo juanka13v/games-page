@@ -13,7 +13,9 @@ const Navbar = () => {
     <div className="container_navbar">
       <div className="navbar_wrapper">
         <div className="navbar_logo">
-          <i className="fa-solid fa-gamepad"></i>
+          <Link to="/">
+            <i className="fa-solid fa-gamepad"></i>
+          </Link>
 
           <div className="navbar_menu" onClick={handleMenu}>
             {isOpen ? (

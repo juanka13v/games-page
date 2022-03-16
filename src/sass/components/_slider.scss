@@ -1,9 +1,14 @@
 .slider_container {
   max-width: 450px;
   height: 300px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: $xs) {
+    height: 200px;
+  }
 
   .slide {
     width: 100%;

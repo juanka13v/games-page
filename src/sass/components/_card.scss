@@ -6,7 +6,7 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 300px;
-
+  
   .card-header {
     img {
       width: 100%;
@@ -14,7 +14,7 @@
       object-fit: cover;
     }
   }
-
+  
   .card-body {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     align-items: flex-start;
     padding: 16px;
     min-height: 150px;
-
+    
     .tag {
       background-color: $bg-color-3;
       border-radius: 50px;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagination = ({ setPage, page, totalGames, limit }) => {
+const Pagination = ({ setPage, page, totalGames, limit, executeScroll }) => {
   const cells = [];
 
   for (let i = 0; i < Math.ceil(totalGames / limit); i++) {
@@ -36,7 +36,10 @@ const Pagination = ({ setPage, page, totalGames, limit }) => {
         {cells.map((item, index) => {
           return (
             <li
-              onClick={(e) => handlePage(e)}
+              onClick={(e) => {
+                handlePage(e);
+                executeScroll();
+              }}
               key={index}
               className={item === page ? "cell cell-active" : "cell"}
             >

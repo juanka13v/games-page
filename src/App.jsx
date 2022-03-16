@@ -7,7 +7,7 @@ import {
   Routes, 
   Route
 } from 'react-router-dom';
-import SingleGame from "./components/SingleGame";
+import SingleGamePage from "./pages/SingleGamePage";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path="/single-game" element={<SingleGame />} />
+        <Route path="/game/:id" element={<SingleGamePage />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Card = ({title, thumbnail, short_description,genre}) => {
+
+const Card = ({title, thumbnail, short_description,genre, _id}) => {
 
   return (
-    <div className='card'>
+    <Link to={`/game/${_id}`} style={{textDecoration: "none"}}>
+      <div className='card'>
       <div className="card-header">
         <img src={thumbnail} alt={title} />
       </div>
@@ -13,6 +16,7 @@ const Card = ({title, thumbnail, short_description,genre}) => {
         <p>{short_description}</p>
       </div>
     </div>
+    </Link>
   )
 }
 
