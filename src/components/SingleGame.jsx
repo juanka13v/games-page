@@ -25,7 +25,7 @@ const SingleGame = ({
       </div>
       <div className="body">
         <div className="slider">
-          <Slider imgs={screenshots} />
+          <Slider screenshots={screenshots} />
         </div>
         <div className="content">
           <div className="img">

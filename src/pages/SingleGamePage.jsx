@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Slider from "../components/Slider";
 
 import SingleGame from "../components/SingleGame";
 
