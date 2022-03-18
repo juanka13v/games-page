@@ -1,0 +1,32 @@
+.container-error {
+    background-color: $bg-color-8;
+    color: $text-color-3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 50vh;
+
+    img {
+        height: 80px;
+        width: 80px;
+    }
+
+    h3 {
+        font-weight: 300;
+        color: $bg-color-3;
+        font-size: 2.5rem;
+
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+
+}

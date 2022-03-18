@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  background-color: $bg-color-8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  color: $text-color-3;
+
+  h2 {
+      font-size: 3rem;
+      color: $bg-color-3;
+      margin-bottom: 2rem;
+  }
+
+  h3 {
+    // color: $bg-color-3;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  p {
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+  }
+
+  button {
+    border: 2px solid $bg-color-3;
+    background-color: inherit;
+    color: $bg-color-7;
+    font-size: 1.5rem;
+    padding: 5px 14px;
+    cursor: pointer;
+     &:hover {
+         background-color: $bg-color-3;
+         color: $text-color-2;
+         border: 2px solid $text-color-2;
+     }
+  }
+}

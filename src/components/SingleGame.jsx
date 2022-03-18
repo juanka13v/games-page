@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slider from "./Slider";
+import Error from "./Error";
 
 const SingleGame = ({
   title,
@@ -15,7 +16,7 @@ const SingleGame = ({
   minimum_system_requirements,
 }) => {
   if (!title) {
-    return <div>Oh something wrong...</div>;
+    return <Error />;
   }
 
   return (

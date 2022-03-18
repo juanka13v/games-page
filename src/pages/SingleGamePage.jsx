@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Slider from "../components/Slider";
 
 import SingleGame from "../components/SingleGame";
+import Loading from "../components/Loading";
 
 const SingleGamePage = () => {
   const [data, setData] = useState([]);
@@ -29,11 +30,11 @@ const SingleGamePage = () => {
   }, []);
 
   if (loading) {
-    return <p>Data is loading...</p>;
+    return <Loading />
   }
 
   if (error) {
-    return <p>There was an error loading your data!</p>;
+    return <Error />
   }
 
   return (

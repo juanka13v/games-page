@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
+import Loading from "../components/Loading";
 
 // Hacer en la api una reconmendacion aleatoria
 
@@ -7,7 +8,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [totalGames, setTotalGames] = useState(null);
   const [platform, setPlatform] = useState('');
   const [genre, setGenre] = useState('');
@@ -17,6 +18,7 @@ const Home = () => {
 
   
   const getData = async () => {
+    setLoading(true)
     const collection = await fetch(url);
     const res = await collection.json();
     const indexOfLastGame = limit * page;
@@ -30,6 +32,10 @@ const Home = () => {
   useEffect(() => {
     getData();
   }, [url, page]);
+
+  if(loading) {
+    return <Loading />
+  }
 
   return (
     <div className="container_home">

@@ -8,7 +8,16 @@ const NewSlider = ({ screenshots }) => {
   };
 
   const imgsList = screenshots.map((img, index) => {
-    return <img src={img} key={index} onClick={handleChangeImgs} className={img === image ? 'active': 'no-active'} />;
+    return (
+      <div className="thumbnail-img">
+        <img
+          src={img}
+          key={index}
+          onClick={handleChangeImgs}
+          className={img === image ? "active" : "no-active"}
+        />
+      </div>
+    );
   });
 
   return (
