@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import Card from "../components/Card";
 import Filter from "./Filter";
 import Pagination from "./Pagination";
@@ -14,11 +14,9 @@ function Cards({
   setPlatform,
   setGenre,
 }) {
+  const topPage = useRef(null);
 
-  const topPage = useRef(null)
-
-  const executeScroll = () => topPage.current.scrollIntoView()   
-
+  const executeScroll = () => topPage.current.scrollIntoView();
 
   if (loading) {
     return <h2>loading...</h2>;
@@ -26,7 +24,9 @@ function Cards({
 
   return (
     <div className="cards">
-      <h1 className="cards_title">{titleCard}</h1>
+      <div className="cards_title">
+        <h1>{titleCard}</h1>
+      </div>
       <Filter setGenre={setGenre} setPlatform={setPlatform} />
       <div className="cards_content" ref={topPage}>
         {games.map((game) => {

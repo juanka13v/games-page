@@ -9,7 +9,7 @@ const NewSlider = ({ screenshots }) => {
 
   const imgsList = screenshots.map((img, index) => {
     return (
-      <div className="thumbnail-img">
+      <div className="thumbnail-img" key={index}>
         <img
           src={img}
           key={index}
