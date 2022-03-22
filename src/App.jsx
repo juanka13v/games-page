@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game/:id" element={<SingleGamePage />} />
-        <Route path="/test" element={<Carousel />} />
+        {/* <Route path="/test" element={<Carousel />} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />

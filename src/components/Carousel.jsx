@@ -3,13 +3,8 @@ import { Link } from "react-router-dom";
 import Loading from "./Loading";
 import Error from "./Error";
 
-const Carousel = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+const Carousel = ({images, loading, error}) => {
   const [image, setImage] = useState(0);
-
-  const url = "https://api-games-ar.herokuapp.com/api/v1/recommendations";
 
   const next = () => {
     if (image === 2) {
@@ -29,20 +24,6 @@ const Carousel = () => {
     setImage(image - 1);
   };
 
-  useEffect(() => {
-    setLoading(true);
-    fetch(url)
-      .then((res) => res.json())
-      .then((game) => {
-        setData(game.data);
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
 
   if (loading) {
     return <Loading />;
@@ -51,11 +32,10 @@ const Carousel = () => {
   if (error) {
     return <Error />;
   }
-  // 450 215
 
   return (
     <div className="carousel">
-      {data.map((item, index) => {
+      {images.map((item, index) => {
         const { _id, title, screenshots, short_description, thumbnail } = item;
         return (
           <div

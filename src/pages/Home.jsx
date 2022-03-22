@@ -8,7 +8,10 @@ import Carousel from "../components/Carousel";
 const Home = () => {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
+  const [error, setError] = useState(null);
   const [data, setData] = useState([]);
+  const [loading2, setLoading2] = useState(false);
+  const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
   const [totalGames, setTotalGames] = useState(null);
   const [platform, setPlatform] = useState("");
@@ -16,6 +19,8 @@ const Home = () => {
 
   const url = `https://api-games-ar.herokuapp.com/api/v1/games?platform=${platform}&&genre=${genre}`;
   // const url = `https://api-games-ar.herokuapp.com/api/v1/game/6228d682eff5d5e9fa138e20`;
+
+  const urlRecommendations = "https://api-games-ar.herokuapp.com/api/v1/recommendations";
 
   const getData = async () => {
     setLoading(true);
@@ -29,8 +34,24 @@ const Home = () => {
     setLoading(false);
   };
 
+  const getDataRecommendations = () => {
+    setLoading2(true);
+    fetch(urlRecommendations)
+      .then((res2) => res2.json())
+      .then((game) => {
+        setImages(game.data);
+      })
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+        setLoading2(false);
+      });
+  };
+
   useEffect(() => {
     getData();
+    getDataRecommendations();
   }, [url, page]);
 
   if (loading) {
@@ -43,7 +64,7 @@ const Home = () => {
         <div className="title">
           <h1>Recommendations</h1>
         </div>
-        <Carousel />
+        <Carousel images={images} loading={loading2} error={error} />
 
         <Cards
           games={data}
