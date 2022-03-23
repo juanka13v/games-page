@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Slider from "../components/Slider";
 
 import SingleGame from "../components/SingleGame";
 import Loading from "../components/Loading";
 
+
 const SingleGamePage = () => {
   const [data, setData] = useState([]);
+  const [dataRe, setDataRe] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
@@ -20,6 +21,7 @@ const SingleGamePage = () => {
       .then((res) => res.json())
       .then((game) => {
         setData(game.data);
+        setDataRe(game.re);
       })
       .catch((err) => {
         setError(err);
@@ -27,19 +29,19 @@ const SingleGamePage = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
 
   if (error) {
-    return <Error />
+    return <Error />;
   }
 
   return (
     <div className="single-game-page">
-      <SingleGame {...data} />
+      <SingleGame {...data} recommendations={dataRe} />
     </div>
   );
 };

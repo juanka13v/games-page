@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import Loading from "../components/Loading";
 import Carousel from "../components/Carousel";
+import { tabTitle } from "../utils/generalFuntions";
 
 // Hacer en la api una reconmendacion aleatoria
 
 const Home = () => {
+  tabTitle('Games | Home');
+
+
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
   const [error, setError] = useState(null);

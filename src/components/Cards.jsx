@@ -10,9 +10,7 @@ function Cards({
   setPage,
   page,
   totalGames,
-  limit,
-  setPlatform,
-  setGenre,
+  limit
 }) {
   const topPage = useRef(null);
 
@@ -27,7 +25,6 @@ function Cards({
       <div className="cards_title">
         <h1>{titleCard}</h1>
       </div>
-      <Filter setGenre={setGenre} setPlatform={setPlatform} />
       <div className="cards_content" ref={topPage}>
         {games.map((game) => {
           return <Card {...game} key={game._id} />;
